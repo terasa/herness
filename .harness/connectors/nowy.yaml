@@ -1,0 +1,23 @@
+connector:
+  name: nowy
+  identifier: nowy
+  description: ""
+  orgIdentifier: default
+  projectIdentifier: test
+  type: Github
+  spec:
+    url: https://github.com/terasa
+    validationRepo: test
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: terasa
+          tokenRef: ghtoken
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: ghtoken
+    executeOnDelegate: false
+    type: Account
